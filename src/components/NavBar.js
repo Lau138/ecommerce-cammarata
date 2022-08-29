@@ -1,11 +1,12 @@
 import logo from "../img/jordan.png";
 import "./style.css";
+import CartWidget from "../components/CartWidget"
 
 const NavBar = () => {
     return (
         <nav className="nav">
             <div className="logo">
-                <a href="#"><img style={{ maxWidth: "100%" }} src={logo} alt="logo"></img></a>
+                <a href="#"><img src={logo} alt="logo"></img></a>
             </div>
             <div className="navItems">
                 <ul>
@@ -22,6 +23,7 @@ const NavBar = () => {
             </div>
             <div className="login">
                 <a href="#">Iniciar sesión</a>
+                <CartWidget />
             </div>
         </nav>
     )

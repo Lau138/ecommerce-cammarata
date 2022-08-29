@@ -2,6 +2,9 @@ a{
     text-decoration: none;
     color: black
 }
+img{
+    max-width: 100%;
+}
 .logo{
     max-width: 40px;
 }
@@ -32,6 +35,36 @@ a{
     border-bottom: 2px solid black;
 }
 
+.login {
+    display: flex;
+    align-items: center;
+}
 .login a:hover{
     color: rgba(0, 0, 0, 0.6);
+}
+
+.logo-carrito{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+.logo-carrito div{
+    max-width: 30px;
+
+}
+
+.item{
+    margin: 2px auto;
+    padding: 10px;
+    width: 200px;
+    border: 1px solid black;
+}
+.item__contador{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.catalogo{
+    display: flex;
 }
