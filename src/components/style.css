@@ -9,6 +9,7 @@ img{
     max-width: 40px;
 }
 
+/*Nav*/
 .nav{
     display: flex;
     align-items: center;
@@ -65,6 +66,7 @@ img{
     margin: 0 5px;
     width: 200px;
     border: 1px solid black;
+    border-radius: 4px;
     padding-bottom: 5px;
 }
 .item p{
@@ -92,3 +94,23 @@ img{
 .ItemList{
     display: flex;
 }
+
+/*itemDetail*/
+.itemDetail{
+    display: flex;
+    border: 1px solid black;
+    margin: 20px 0;
+}
+.itemDetail div{
+    flex: 1;
+}
+
+.itemDetail_detail{
+    text-align: left;
+    font-size: 25px;
+    font-weight: bold;
+}
+.itemDetail_detail h4{
+    font-weight: 300;
+}
+

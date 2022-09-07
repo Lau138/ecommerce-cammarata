@@ -1,7 +1,7 @@
-import ItemCount from "../ItemCount";
-import ItemList from "../ItemList";
+import ItemCount from "../ItemListContainer/ItemCount";
+import ItemList from "../ItemListContainer/ItemList";
 import { useEffect, useState } from "react";
-import data from "../ItemListContainer/shoes-data";
+import data from "../shoes-data";
 
 const ItemListContainer = () => {
 

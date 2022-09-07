@@ -1,4 +1,4 @@
-import zapatillas from "../../img/zapatillas.png";
+import zapatillas from "../img/zapatillas.png";
 const data = [
     {
         id: 1,
