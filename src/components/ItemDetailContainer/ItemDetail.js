@@ -33,6 +33,7 @@ const ItemDetail = ({ itemDetail }) => {
                     <h2>{itemDetail.title}</h2>
                     <p>{itemDetail.price}</p>
                     {talle}
+                    <ItemCount stock={itemDetail.stock} />
                     <button>AGREGAR AL CARRITO</button>
                 </div> 
             </div>
