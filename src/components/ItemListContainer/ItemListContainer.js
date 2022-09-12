@@ -1,10 +1,12 @@
 import ItemCount from "../ItemListContainer/ItemCount";
 import ItemList from "../ItemListContainer/ItemList";
 import { useEffect, useState } from "react";
-import data from "../shoes-data";
+import data from "../data";
+import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
 
+  const { productosId } = useParams()
 
   const [items, setItems] = useState([]);
 
@@ -15,10 +17,15 @@ const ItemListContainer = () => {
   })
 
   useEffect(() => {
-    delay.then((result) => {
-      setItems(result);
+    delay.then(resultado => {
+      if (productosId === undefined) {
+        setItems(resultado)
+      } else {
+        const newProductos = resultado.filter(items => items.categoria === productosId);
+        setItems(newProductos)
+      }
     })
-  }, []);
+  }, [productosId])
 
   return (
     <>
@@ -27,9 +34,9 @@ const ItemListContainer = () => {
           <div className="ItemListContainer">
             <ItemList items={items} />
           </div>) : (
-            <div>Cargando...</div>
-          )
-    }
+          <div>Cargando...</div>
+        )
+      }
     </>
   )
 }

@@ -1,7 +1,7 @@
 import {useState} from "react";
 
-const ItemCount = ({producto, inicial, stock}) => {
-    const [contador, setContador] = useState(inicial);
+const ItemCount = ({stock}) => {
+    const [contador, setContador] = useState(0);
     const sumarContador = () =>{
         if (contador<stock){
             setContador(contador+1)
@@ -14,8 +14,7 @@ const ItemCount = ({producto, inicial, stock}) => {
     }
   return (
     <>
-    <div className="item">
-        <h1>{producto}</h1>
+    <div>
         <h3>Stock: {stock}</h3>
         <div className="item__contador">
             <button onClick={restarContador}>-</button>
