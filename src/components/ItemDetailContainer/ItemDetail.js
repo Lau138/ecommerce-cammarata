@@ -1,6 +1,15 @@
 import ItemCount from "../ItemListContainer/ItemCount"
+import { useState } from "react"
+import { Link } from "react-router-dom";
 
 const ItemDetail = ({ itemDetail }) => {
+
+    const [contador, setContador] = useState(0)
+    const [isCont, setIsCont] = useState(false)
+    const onAdd = (cont) => {
+        setContador(cont)
+        setIsCont(true)
+    }
 
     let talle
     if (itemDetail.categoria === "SNKRS") {
@@ -14,7 +23,7 @@ const ItemDetail = ({ itemDetail }) => {
             <option value="t44">44ars</option>
             <option value="t45">45ars</option>
         </select>
-    } else if (itemDetail.categoria === "remeras"){
+    } else if (itemDetail.categoria === "remeras") {
         talle = <select>
             <option disabled>-- Seleccionar Talle --</option>
             <option value="S">S</option>
@@ -33,9 +42,17 @@ const ItemDetail = ({ itemDetail }) => {
                     <h2>{itemDetail.title}</h2>
                     <p>{itemDetail.price}</p>
                     {talle}
-                    <ItemCount stock={itemDetail.stock} />
-                    <button>AGREGAR AL CARRITO</button>
-                </div> 
+                    {
+                        isCont
+                            ?
+                            <>
+                                <h3>Stock: {itemDetail.stock-contador}</h3>
+                                <Link to="/cart"><button>Finalizar Compra</button></Link>
+                            </>
+                            :
+                            <ItemCount stock={itemDetail.stock} onAdd={onAdd} />
+                    }
+                </div>
             </div>
         </>
     )
