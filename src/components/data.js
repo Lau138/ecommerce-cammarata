@@ -13,7 +13,7 @@ const data = [
     {
         id: 1,
         title: 'Jordan 1 Retro High "Union Los Angeles"',
-        price: "$475.000,00",
+        price: 475000,
         img: j1unionlosangeles,
         categoria: "SNKRS",
         stock: 2,
@@ -21,7 +21,7 @@ const data = [
     {
         id: 2,
         title: 'Jordan 1 Retro "Chicago" (2015)',
-        price: "$540.000,00",
+        price: 540000,
         img: j1retrochicago,
         categoria: "SNKRS",
         stock: 1,
@@ -29,7 +29,7 @@ const data = [
     {
         id: 3,
         title: 'Jordan 4 "Military Black"',
-        price: "$108.000,00",
+        price: 108000,
         img: j4militaryblack,
         categoria: "SNKRS",
         stock: 6,
@@ -37,7 +37,7 @@ const data = [
     {
         id: 4,
         title: 'Remera Jordan Flight',
-        price: "$26.000,00",
+        price: 26000,
         img: remerajordanflight,
         categoria: "remeras",
         stock: 17,
@@ -45,7 +45,7 @@ const data = [
     {
         id: 5,
         title: 'Jordan 1 Low "Mocha"',
-        price: "$70.200,00",
+        price: 70200,
         img: j1lowmocha,
         categoria: "SNKRS",
         stock: 9,
@@ -53,7 +53,7 @@ const data = [
     {
         id: 6,
         title: 'Jordan 3 "Racer Blue"',
-        price: "$86.400,00",
+        price: 86400,
         img: j3racerblue,
         categoria: "SNKRS",
         stock: 5,
@@ -61,7 +61,7 @@ const data = [
     {
         id: 7,
         title: "Remera Nike Photo Zero",
-        price: "$13.800,00",
+        price: 13800,
         img: remeranikezero,
         categoria: "remeras",
         stock: 26,
@@ -69,7 +69,7 @@ const data = [
     {
         id: 8,
         title: 'Jordan 5 "Shattered Backboard"',
-        price: "$63.000,00",
+        price: 63000,
         img: j5shatteredbackboard,
         categoria: "SNKRS",
         stock: 14,
@@ -77,7 +77,7 @@ const data = [
     {
         id: 9,
         title: "Anti Social Social Club Kkoch Tee Black",
-        price: "$32.500,00",
+        price: 32500,
         img: remeraantisocialsocialclubkkochtee,
         categoria: "remeras",
         stock: 11,
@@ -85,7 +85,7 @@ const data = [
     {
         id: 10,
         title: "Remera Jordan Flying Man",
-        price: "$16.000,00",
+        price: 16000,
         img: remerajordanflyingman,
         categoria: "remeras",
         stock: 32,

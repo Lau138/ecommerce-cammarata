@@ -181,3 +181,20 @@ img{
  line-height: 1.6em;
 }
 
+/*Cart*/
+.itemCartContainer{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.itemCart{
+    display: flex;
+    align-items: center;
+    border: 1px solid #E2E3E4;
+    border-radius: 4px;
+    padding: 15px 0;
+    justify-content: space-around;
+}
+.itemCart__img{
+    max-width: 100px;
+}

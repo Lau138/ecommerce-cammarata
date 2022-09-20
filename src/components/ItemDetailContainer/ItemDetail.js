@@ -1,14 +1,15 @@
-import ItemCount from "../ItemListContainer/ItemCount"
-import { useState } from "react"
-import { Link } from "react-router-dom";
+import ItemCount from "./ItemCount"
+import { useState, useContext } from "react"
+import { CartContext } from "../../context/CartContext";
 
 const ItemDetail = ({ itemDetail }) => {
-
+    const value = useContext(CartContext)
     const [contador, setContador] = useState(0)
-    const [isCont, setIsCont] = useState(false)
+
     const onAdd = (cont) => {
         setContador(cont)
-        setIsCont(true)
+        value.addItem(itemDetail, cont)
+        itemDetail.stock = itemDetail.stock-cont
     }
 
     let talle
@@ -40,18 +41,9 @@ const ItemDetail = ({ itemDetail }) => {
                 <div className="itemDetail_detail">
                     <h4>Jordan</h4>
                     <h2>{itemDetail.title}</h2>
-                    <p>{itemDetail.price}</p>
+                    <p>${itemDetail.price}</p>
                     {talle}
-                    {
-                        isCont
-                            ?
-                            <>
-                                <h3>Stock: {itemDetail.stock-contador}</h3>
-                                <Link to="/cart"><button>Finalizar Compra</button></Link>
-                            </>
-                            :
-                            <ItemCount stock={itemDetail.stock} onAdd={onAdd} />
-                    }
+                    <ItemCount stock={itemDetail.stock} onAdd={onAdd}/>
                 </div>
             </div>
         </>

@@ -12,7 +12,7 @@ const Item = ({ title, price, img, id }) => {
         </div>
         <div className="item_texto">
           <p>{title}</p>
-          <h3>Precio: {price}</h3>
+          <h3>Precio: ${price}</h3>
         </div>
       </div>
     </Link>

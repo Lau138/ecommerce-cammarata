@@ -1,4 +1,3 @@
-import ItemCount from "../ItemListContainer/ItemCount";
 import ItemList from "../ItemListContainer/ItemList";
 import { useEffect, useState } from "react";
 import data from "../data";
