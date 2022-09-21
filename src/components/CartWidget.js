@@ -4,13 +4,13 @@ import React, { useContext } from 'react'
 import { CartContext} from "../context/CartContext";
 
 const CartWidget = () => {
-  const { productCartList } = useContext(CartContext);
+  const { getTotalProducts } = useContext(CartContext);
 
   return (
     <Link to="/cart">
       <div className="logo-carrito">
         <div><img src={logo}></img></div>
-        <p>{productCartList.length}</p>
+        <p>{getTotalProducts()}</p>
       </div>
     </Link>
   )

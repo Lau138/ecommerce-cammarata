@@ -1,9 +1,10 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 
 const ItemCount = ({ stock, onAdd }) => {
     const value = useContext(CartContext)
+
     const [contador, setContador] = useState(0);
 
     const sumarContador = () => {
@@ -16,6 +17,13 @@ const ItemCount = ({ stock, onAdd }) => {
             setContador(contador - 1)
         }
     }
+
+    useEffect(()=>{
+        setContador(0)
+    },[stock])
+
+    
+
     return (
         <>
             <div>
@@ -25,9 +33,8 @@ const ItemCount = ({ stock, onAdd }) => {
                     <p>{contador}</p>
                     <button onClick={sumarContador}>+</button>
                 </div>
-                <Link to="/cart">
-                    <button onClick={() => onAdd(contador)}>Comprar</button>
-                </Link>
+                <button onClick={() => onAdd(contador)}>Agregar al carrito</button>
+                
             </div>
         </>
     )
