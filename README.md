@@ -11,3 +11,6 @@ A continuacions pueden ver el historial de cambios:
 Aplique todos los conceptos que vimos hasta el momento\
 Cree mi propia base de datos para implementas los diferente items que se muestran en la pagina.
 
+### `13/10/2022`
+
+En todo este mes termine de darle funcionalidad a mi proyecto haciendo que las compras afecten a mi base de datos y agregues estilos.
