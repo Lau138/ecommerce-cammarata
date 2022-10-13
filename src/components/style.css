@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    padding: 0;
 }
 
 body {
@@ -213,23 +214,80 @@ img {
     flex-direction: column;
 }
 
-.itemCartContainer {
-    max-width: 1100px;
+.container {
+    max-width: 1200px;
     margin: 0 auto;
+}
+
+.itemCartContainer{
+    display: flex;
+    margin-top: 50px;
+}
+
+.itemCartContainer-items{
+    flex: 3;
+}
+
+.itemCartContainer form{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-left: 10px;
+    border: 1px solid #E2E3E4;
+    border-radius: 4px;
+    height: 300px;
+    padding: 20px;
+    position: relative;
+}
+.realizarCompra{
+    width: 90%;
+    position: absolute;
+    bottom: 10px;
+}
+.realizarCompra button{
+    width: 100%;
+    height: 40px;
 }
 
 .itemCart {
     display: flex;
+    background-color: white;
     align-items: center;
     border: 1px solid #E2E3E4;
     border-radius: 4px;
     padding: 15px 0;
-    margin: 5px 0;
+    margin-bottom: 10px;
     justify-content: space-around;
+}
+.itemCart-title, .itemCart-price, .itemCart-subtotal{
+ max-width: 150px;
+}
+
+.itemCart:first-child .itemCart-item::before{
+    color: black;
+    position: absolute;
+    font-size: 13px;
+    font-weight: 500;
+    top: 70px;
+}
+.itemCart:first-child .itemCart-title::before{
+    content: 'PRODUCTO';
+}
+.itemCart:first-child .itemCart-price::before{
+    content: 'PRECIO';
+}
+.itemCart:first-child .itemCart-quantity::before{
+    content: 'CANTIDAD';
+}
+.itemCart:first-child .itemCart-subtotal::before{
+    content: 'SUBTOTAL';
 }
 
 .itemCart__img {
-    max-width: 100px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
 }
 
 .productoAgregadoMensaje{

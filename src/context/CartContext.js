@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, createContext, useContext } from 'react'
+import { useState} from 'react'
 
 export const CartContext = React.createContext();
 
@@ -7,7 +7,7 @@ export const CartProvider = ({ children }) => {
     const [productCartList, setProductCartList] = useState([])
 
     const addItem = (item, quantity) => {
-        if(quantity>0){
+        if (quantity > 0) {
             const newProduct = {
                 ...item,
                 quantity
@@ -22,7 +22,7 @@ export const CartProvider = ({ children }) => {
                 newArray.push(newProduct);
                 setProductCartList(newArray);
             }
-        } 
+        }
     }
 
     const removeItem = (itemId) => {
@@ -39,18 +39,29 @@ export const CartProvider = ({ children }) => {
         return productExist;
     }
 
-    const getTotal = () =>{
-        const totalProducts = productCartList.reduce((acc,item)=>acc+item.price*item.quantity,0);
+    const getTotal = () => {
+        const totalProducts = productCartList.reduce((acc, item) => acc + item.price * item.quantity, 0);
         return totalProducts
     }
 
-    const getTotalProducts = () =>{
-        const totalProducts = productCartList.reduce((acc,item)=>acc+item.quantity,0);
+    const getTotalProducts = () => {
+        const totalProducts = productCartList.reduce((acc, item) => acc + item.quantity, 0);
         return totalProducts
+    }
+
+
+    
+    const getQuantity = (itemId) => {
+        if (isInCart(itemId)) {
+            const newArray = productCartList.filter(item => item.id == itemId);
+            return newArray[0].quantity
+        }else {
+            return 0
+        }
     }
 
     return (
-        <CartContext.Provider value={{ productCartList, addItem, removeItem, clear, isInCart,getTotal, getTotalProducts }}>
+        <CartContext.Provider value={{ productCartList, addItem, removeItem, clear, isInCart, getTotal, getTotalProducts, getQuantity }}>
             {children}
         </CartContext.Provider>
     )

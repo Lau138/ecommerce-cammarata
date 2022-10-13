@@ -25,7 +25,6 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="login">
-                <Link to="/iniciar-sesion">Iniciar sesión</Link>
                 <CartWidget />
             </div>
         </nav>

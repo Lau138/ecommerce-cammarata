@@ -1,6 +1,5 @@
 import { useState, useContext, useEffect } from "react";
 import { CartContext } from "../../context/CartContext";
-import { Link } from "react-router-dom";
 
 const ItemCount = ({ stock, onAdd }) => {
     const value = useContext(CartContext)
@@ -21,8 +20,6 @@ const ItemCount = ({ stock, onAdd }) => {
     useEffect(()=>{
         setContador(0)
     },[stock])
-
-    
 
     return (
         <>
